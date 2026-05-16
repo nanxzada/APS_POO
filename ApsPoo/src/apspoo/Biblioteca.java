@@ -22,16 +22,16 @@ public class Biblioteca {
         for (Livro livroAtual : lista_de_livros){
             if (livroAtual.getTitulo().equalsIgnoreCase(titulo)){
                 if(livroAtual.isDisponivel() == true){
-                    System.out.println("O livro"+livroAtual.getTitulo()+"está disponivel.");
+                    System.out.println("O livro "+livroAtual.getTitulo()+" esta disponivel.");
                     return;
                 } else{
-                    System.out.println("O livro está emprestado para: "+livroAtual.getEmprestado_para().getNome());
+                    System.out.println("O livro esta emprestado para: "+livroAtual.getEmprestado_para().getNome());
                     return;
                 }
            
             }
         }
-        System.out.println("Livro não encontrado na biblioteca.");
+        System.out.println("Livro nao encontrado na biblioteca.");
     }
     public void emprestar_livro(String titulo, String id_usuario){
         Livro livroEncontrado = null;
@@ -52,17 +52,17 @@ public class Biblioteca {
             }
         
         if (livroEncontrado == null){
-            System.out.println("Livro não foi encontrado.");
+            System.out.println("Livro nao foi encontrado.");
             return;
         }
         
         if (usuarioEncontrado == null){
-            System.out.println("O usuário não foi encontrado.");
+            System.out.println("O usuario nao foi encontrado.");
             return;
         }
         
         if(!livroEncontrado.isDisponivel()){
-            System.out.println("O livro encontrado não está disponivel e ja foi emprestado.");
+            System.out.println("O livro encontrado nao esta disponivel e ja foi emprestado.");
             return;
         }
         
@@ -74,11 +74,11 @@ public class Biblioteca {
             }
         }
         if (contador >= 3){
-            System.out.println("O usuário ja tem mais de 3 livros emprestados.");
+            System.out.println("O usuario ja tem mais de 3 livros emprestados.");
             return;
             }
         livroEncontrado.Emprestar(usuarioEncontrado);
-        System.out.println("Empréstimo realizado com sucesso para: "+usuarioEncontrado.getNome()+"!");
+        System.out.println("Emprestimo realizado com sucesso para: "+usuarioEncontrado.getNome()+"!");
     }
     public void devolver_livro(String titulo){
         for(Livro livroAtual: lista_de_livros){
@@ -88,7 +88,7 @@ public class Biblioteca {
                 return;
             }
         }
-        System.out.println("O livro não foi encontrado!");
+        System.out.println("O livro nao foi encontrado!");
     }
     
 }
