@@ -51,7 +51,7 @@ public class ApsPoo {
         biblioteca.status_livro("The Mamba Mentality: How I Play");
         
        //Verificando Limite de 3 livros por Usuário
-        System.out.println("\nTeste 4 - LIMITE DE LIVROS");
+        System.out.println("\nTeste 4 - LIMITE DE 3 LIVROS");
         biblioteca.emprestar_livro("Roube como um artista", "L0407");
         
        //Pegando livro que ja foi emprestado
